@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+
+    <meta name="Form Elements" content="Template">
+    <meta name="keyword" content="Put in 5-7 keywords related to your webpage">
+    <meta name="author" content="Muadhul Haq">
+    <link href="css/forms.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap-theme.min.css">
+</head>
+
+<body>
+
+    <div id="container" class="container">
+
+        <header>
+            <h1>HTML5 FORMS</h1>
+        </header>
+
+        <main>
+            <form class="html5style">
+                <div class="form-group">
+                    <label for="first_last">WHat is your first and last name:</label>
+                    <input type="text" class="form-control" id="firs_last" placeholder="First and Last Name" required autofocus autocomplete="on">
+                    <span class="help_block"></span>
+                </div>
+                <div class="form-group">
+                    <label for="email_address">What is you email address:</label>
+                    <input type="email" class="form-control" id="email_address" placeholder="Email Address" required autocomplete="on">
+                    <span class="help_block"></span>
+                </div>
+                <div class="form-group">
+                    <label for="confirm_email">Confirm you email address:</label>
+                    <input type="email" class="form-control" id="confirm_email" placeholder="Confirm you email address" required autocomplete="off">
+                    <span class="help_block"></span>
+                </div>
+                <div class="form-group">
+                    <label for="fav_site">What is you favourite website</label>
+                    <input type="URL" class="form-control" id="fav_site" placeholder="Favourite" required>
+                    <span class="help_block"></span>
+                </div>
+                <div class="form-group">
+                    <label for="phone">What is you phone number:</label>
+                    <input type="tel" class="form-control" id="phone" placeholder="+1 555 555 5555">
+                    <span class="help_block"></span>
+                </div>
+                <div class="form-group">
+                    <label for="dob">What is your birthday:</label>
+                    <input type="date" class="form-control" id="dob">
+                    <span class="help_block"></span>
+                </div>
+                <div class="form-group">
+                    <label for="age">What is your age:</label>
+                    <input min="1" max="120" type="number" class="form-control" id="age" placeholder="">
+                    <span class="help_block"></span>
+                </div>
+                <div class="form-group">
+                    <label for="color">What is your color:</label>
+                    <input type="color" class="form-control" id="color">
+                    <span class="help_block"></span>
+                </div>
+                <div class="form-group">
+                    <label for="chocolate">What is your favourite chocolate:</label>
+                    <input type="text" class="form-control" id="chocolate" list="choc_list">
+                    <span class="help_block"></span>
+                    <datalist id="choc_list">
+                        <option value="white">
+                            <option value="dark">
+                                <option value="milk">
+                    </datalist>
+                </div>
+                <div class="form-group">
+                    <label for="part_number">3/4 Phillips screwdriver:</label>
+                    <input type="text" class="form-control" id="part_number" placeholder="e.g XXX9764XX" pattern="[A-Z,a-z]{3}(0-9){4}[A-Z,a-z]{2}">
+                    <span class="help_block"></span>
+                </div>
+                <div class="form-group">
+                    <label for="velocity">What is the airspeed velocity of an unladen swallow:<span id="asv">1</span>(m/s)</label>
+                    <input type="range" class="form-control" id="velocity" step="1" value="1" min="1" max="50">
+                    <span class="help_block"></span>
+                </div>
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+
+
+            </form>
+    </div>
+
+    <script type="text/javascript">
+        document.getElementById("confirm_email").addEventListener("input", verifyEmail);
+        document.getElementById("velocity").addEventListener("input", showAirspeed);
+
+
+        function verifyEmail(input) {
+            input = input.srcElement;
+            if (input.value != document.getElementById('email_address').value) {
+                input.setCustomValidity("The two email addresses must match.");
+            } else {
+                input.setCustomValidity('')
+            }
+            input.nextElementSibling.innerText = input.validationMessage;
+        }
+
+        function showAirspeed(input) {
+            input = input.srcElement;
+            document.getElementById("asv").innerText = input.valueAsNumber;
+        }
+    </script>
+
+    </main>
+
+</body>
+
+</html>

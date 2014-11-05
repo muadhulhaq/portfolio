@@ -1,0 +1,96 @@
+/*reset*/
+
+html, body{
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	width: 100%;
+	height: 100%;
+	-ms-text-size-adjust:100%;
+	-webkit-text-size-adjust:100%;
+	background: #000;
+}
+
+#wrapper{
+	margin: 0 auto;
+	width: 90%;
+}
+
+#instructions{
+	color: white;
+}
+
+h1{
+	font-size: 30px;
+	color: white;
+}
+
+.character{
+	width: 108px;
+	height: 178px;
+	margin: 5px 5px 5px 5px;
+	padding: 2px 2px 2px 2px;
+	background: #fff;
+	display: inline-block;
+	border-radius: 8px;
+
+}
+
+.character_image{
+	width: 100px;
+	height: 150px;
+	border: solid #000 1px;
+
+	margin: 2px auto 2px auto;
+}
+
+.character_name{
+	width: 108px;
+	height: 158px;
+	color: #000;
+	text-align: center;
+}
+
+a.spriteimg{
+	width: 100px;
+	height: 150px;
+	display: block;
+	text-indent: -9999px;
+	overflow: hidden;
+}
+
+a.stan{
+	background:url('../images/sprites.png') 0 0 no-repeat;
+}
+
+a.kyle{
+	background:url('../images/sprites.png') -103px 0 no-repeat;
+}
+
+a.kenny{
+	background:url('../images/sprites.png') -206px 0 no-repeat;
+}
+
+a.cartman{
+	background:url('../images/sprites.png') -311px 0 no-repeat;
+}
+
+a.wendy{
+	background:url('../images/sprites.png') -415px 0 no-repeat;
+}
+
+a.ike{
+	background:url('../images/sprites.png') -520px 0 no-repeat;
+}
+
+a.tweek{
+	background:url('../images/sprites.png') -624px 0 no-repeat;
+}
+
+@media(max-width: 320px){
+	h1{
+		font-size: 16px;
+	}
+	span{
+		font-size: 200px;
+	}
+}
